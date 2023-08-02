@@ -1,0 +1,591 @@
+{
+    "id": "e3e452c9-6021-483e-8565-beb13c98c5a2",
+    "name": "Magick GetState",
+    "projectId": "clka3sh7f0003c4fjf8l5lchr",
+    "hash": "f431dc666149fff95edbf95cc2c5ebb6",
+    "createdAt": "1690388207278",
+    "updatedAt": "1690388548666",
+    "graph": {
+        "id": "demo@0.1.0",
+        "nodes": {
+            "232": {
+                "id": 232,
+                "data": {
+                    "name": "Input - Discord (Text)",
+                    "text": {
+                        "id": "2eb64348-adee-4118-bcca-19697ca3a16a",
+                        "inputs": {},
+                        "secrets": {},
+                        "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+                        "spellName": "Starter",
+                        "publicVariables": "[]"
+                    },
+                    "isInput": true,
+                    "outputs": [],
+                    "success": false,
+                    "inputName": "Default",
+                    "inputType": "Discord (Text)",
+                    "socketKey": "9d61118c-3c5a-4379-9dae-41965e56207f",
+                    "useDefault": false,
+                    "dataControls": {
+                        "inputType": {
+                            "expanded": true
+                        },
+                        "useDefault": {
+                            "expanded": true
+                        },
+                        "defaultValue": {
+                            "expanded": true
+                        }
+                    },
+                    "defaultValue": "Hello world",
+                    "playtestToggle": {
+                        "outputs": [],
+                        "receivePlaytest": false
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 623,
+                                "input": "event",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 623,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -352,
+                    -80
+                ],
+                "name": "Input"
+            },
+            "233": {
+                "id": 233,
+                "data": {
+                    "name": "Output - Subspell",
+                    "success": false,
+                    "isOutput": true,
+                    "socketKey": "0f17a35e-1380-428b-bc87-4a38d207fefc",
+                    "outputType": "Subspell",
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        }
+                    },
+                    "sendToPlaytest": true
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 638,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            },
+                            {
+                                "node": 648,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 638,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            },
+                            {
+                                "node": 648,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "event": {
+                        "connections": []
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": []
+                    },
+                    "output": {
+                        "connections": []
+                    }
+                },
+                "position": [
+                    1536,
+                    -112
+                ],
+                "name": "Output"
+            },
+            "622": {
+                "id": 622,
+                "data": {
+                    "_var": "state",
+                    "name": "EventType",
+                    "success": false,
+                    "isPublic": true
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 623,
+                                "input": "type",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -304,
+                    -192
+                ],
+                "name": "String Variable"
+            },
+            "623": {
+                "id": 623,
+                "data": {
+                    "mode": "Most Recent",
+                    "success": false,
+                    "filterBy": "Channel And Sender (DMs OK)",
+                    "max_count": "1"
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 232,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "event": {
+                        "connections": [
+                            {
+                                "node": 232,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "type": {
+                        "connections": [
+                            {
+                                "node": 622,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 624,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "events": {
+                        "connections": [
+                            {
+                                "node": 624,
+                                "input": "array",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -32,
+                    -80
+                ],
+                "name": "Event Recall"
+            },
+            "624": {
+                "id": 624,
+                "data": {
+                    "element": 0,
+                    "success": false
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 623,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "array": {
+                        "connections": [
+                            {
+                                "node": 623,
+                                "output": "events",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 637,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 637,
+                                "input": "input",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            },
+                            {
+                                "node": 1406,
+                                "input": "object",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    256,
+                    -80
+                ],
+                "name": "Get Value From Array"
+            },
+            "637": {
+                "id": 637,
+                "data": {
+                    "success": false
+                },
+                "inputs": {
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 624,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 624,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "true": {
+                        "connections": [
+                            {
+                                "node": 638,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "false": {
+                        "connections": [
+                            {
+                                "node": 1406,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    544,
+                    -144
+                ],
+                "name": "Is Null Or Undefined"
+            },
+            "638": {
+                "id": 638,
+                "data": {
+                    "success": false
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 637,
+                                "output": "true",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "source": {
+                        "connections": [
+                            {
+                                "node": 639,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 233,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 233,
+                                "input": "input",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    1184,
+                    -176
+                ],
+                "name": "Echo"
+            },
+            "639": {
+                "id": 639,
+                "data": {
+                    "_var": "Default",
+                    "name": "DefaultState",
+                    "success": false,
+                    "isPublic": true
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 638,
+                                "input": "source",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    912,
+                    -256
+                ],
+                "name": "String Variable"
+            },
+            "648": {
+                "id": 648,
+                "data": {
+                    "success": false
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 1406,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "source": {
+                        "connections": [
+                            {
+                                "node": 1406,
+                                "output": "content",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 233,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 233,
+                                "input": "input",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    1184,
+                    -16
+                ],
+                "name": "Echo"
+            },
+            "1406": {
+                "id": 1406,
+                "data": {
+                    "outputs": [
+                        {
+                            "name": "content",
+                            "taskType": "output",
+                            "socketKey": "content",
+                            "socketType": "anySocket",
+                            "connectionType": "output"
+                        }
+                    ]
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 637,
+                                "output": "false",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "object": {
+                        "connections": [
+                            {
+                                "node": 624,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "content": {
+                        "connections": [
+                            {
+                                "node": 648,
+                                "input": "source",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 648,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    832,
+                    -80
+                ],
+                "name": "Get Values From Object"
+            }
+        },
+        "comments": []
+    }
+}

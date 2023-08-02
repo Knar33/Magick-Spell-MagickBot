@@ -1,0 +1,852 @@
+{
+    "id": "7065cb49-45a2-44e0-bc7a-d826ab8b5b69",
+    "name": "Magick Intent Chatting",
+    "projectId": "clka3sh7f0003c4fjf8l5lchr",
+    "hash": "365833357171d022236ade56ff9df76c",
+    "createdAt": "1690389468701",
+    "updatedAt": "1690400729234",
+    "graph": {
+        "id": "demo@0.1.0",
+        "nodes": {
+            "232": {
+                "id": 232,
+                "data": {
+                    "name": "Input - Discord (Text)",
+                    "text": {
+                        "id": "2eb64348-adee-4118-bcca-19697ca3a16a",
+                        "inputs": {},
+                        "secrets": {},
+                        "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+                        "spellName": "Starter",
+                        "publicVariables": "[]"
+                    },
+                    "isInput": true,
+                    "outputs": [],
+                    "success": false,
+                    "inputName": "Default",
+                    "inputType": "Discord (Text)",
+                    "socketKey": "9d61118c-3c5a-4379-9dae-41965e56207f",
+                    "useDefault": false,
+                    "dataControls": {
+                        "inputType": {
+                            "expanded": true
+                        },
+                        "useDefault": {
+                            "expanded": true
+                        },
+                        "defaultValue": {
+                            "expanded": true
+                        }
+                    },
+                    "defaultValue": "Hello world",
+                    "playtestToggle": {
+                        "outputs": [],
+                        "receivePlaytest": false
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 6584,
+                                "input": "event",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            },
+                            {
+                                "node": 6716,
+                                "input": "event",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            },
+                            {
+                                "node": 6722,
+                                "input": "event",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            },
+                            {
+                                "node": 6723,
+                                "input": "event",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 6584,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -224,
+                    -48
+                ],
+                "name": "Input"
+            },
+            "233": {
+                "id": 233,
+                "data": {
+                    "name": "Output - Discord (Text)",
+                    "success": false,
+                    "isOutput": true,
+                    "socketKey": "0f17a35e-1380-428b-bc87-4a38d207fefc",
+                    "outputType": "Discord (Text)",
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        }
+                    },
+                    "sendToPlaytest": true
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 6723,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 6717,
+                                "output": "result",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "event": {
+                        "connections": []
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": []
+                    },
+                    "output": {
+                        "connections": []
+                    }
+                },
+                "position": [
+                    2752,
+                    32
+                ],
+                "name": "Output"
+            },
+            "6584": {
+                "id": 6584,
+                "data": {
+                    "success": false,
+                    "socketKey": "7db39a2c-7473-4129-ad7a-4603b478cb03"
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 232,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "event": {
+                        "connections": [
+                            {
+                                "node": 232,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 6716,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "agentId": {
+                        "connections": []
+                    },
+                    "content": {
+                        "connections": [
+                            {
+                                "node": 6717,
+                                "input": "input",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            },
+                            {
+                                "node": 6722,
+                                "input": "content",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            },
+                            {
+                                "node": 6719,
+                                "input": "input",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "client": {
+                        "connections": []
+                    },
+                    "channel": {
+                        "connections": []
+                    },
+                    "channelType": {
+                        "connections": []
+                    },
+                    "connector": {
+                        "connections": []
+                    },
+                    "entities": {
+                        "connections": []
+                    },
+                    "projectId": {
+                        "connections": []
+                    },
+                    "observer": {
+                        "connections": []
+                    },
+                    "sender": {
+                        "connections": []
+                    },
+                    "embedding": {
+                        "connections": []
+                    },
+                    "rawData": {
+                        "connections": []
+                    }
+                },
+                "position": [
+                    80,
+                    16
+                ],
+                "name": "Event Destructure"
+            },
+            "6716": {
+                "id": 6716,
+                "data": {
+                    "mode": "Most Recent",
+                    "type": "conversation",
+                    "success": false,
+                    "filterBy": "Channel And Sender (DMs OK)",
+                    "max_count": "3"
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 6584,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "event": {
+                        "connections": [
+                            {
+                                "node": 232,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "type": {
+                        "connections": []
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 6719,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "events": {
+                        "connections": [
+                            {
+                                "node": 6717,
+                                "input": "conversation",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    368,
+                    -96
+                ],
+                "name": "Event Recall"
+            },
+            "6717": {
+                "id": 6717,
+                "data": {
+                    "model": "gpt-3.5-turbo",
+                    "top_k": 50,
+                    "top_p": 1,
+                    "success": false,
+                    "temperature": 0.5,
+                    "stopSequences": "",
+                    "presence_penalty": 0,
+                    "frequency_penalty": 0
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 6721,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "system": {
+                        "connections": [
+                            {
+                                "node": 6721,
+                                "output": "prompt",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "conversation": {
+                        "connections": [
+                            {
+                                "node": 6716,
+                                "output": "events",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 6584,
+                                "output": "content",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "function": {
+                        "connections": []
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 6722,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "result": {
+                        "connections": [
+                            {
+                                "node": 233,
+                                "input": "input",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            },
+                            {
+                                "node": 6723,
+                                "input": "content",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "error": {
+                        "connections": []
+                    }
+                },
+                "position": [
+                    1856,
+                    16
+                ],
+                "name": "Generate Text"
+            },
+            "6718": {
+                "id": 6718,
+                "data": {
+                    "type": "Knowledge",
+                    "success": false,
+                    "max_count": "1"
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 6719,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "embedding": {
+                        "connections": [
+                            {
+                                "node": 6719,
+                                "output": "embedding",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "type": {
+                        "connections": [
+                            {
+                                "node": 6746,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 6720,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "documents": {
+                        "connections": [
+                            {
+                                "node": 6720,
+                                "input": "documents",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    976,
+                    -96
+                ],
+                "name": "Get Documents"
+            },
+            "6719": {
+                "id": 6719,
+                "data": {
+                    "error": false,
+                    "model": "text-embedding-ada-002",
+                    "success": false
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 6716,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 6584,
+                                "output": "content",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 6718,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "embedding": {
+                        "connections": [
+                            {
+                                "node": 6718,
+                                "input": "embedding",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    672,
+                    -96
+                ],
+                "name": "Create Text Embedding"
+            },
+            "6720": {
+                "id": 6720,
+                "data": {
+                    "success": false
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 6718,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "documents": {
+                        "connections": [
+                            {
+                                "node": 6718,
+                                "output": "documents",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 6721,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "content": {
+                        "connections": [
+                            {
+                                "node": 6721,
+                                "input": "Content",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    1264,
+                    -96
+                ],
+                "name": "Document to Content"
+            },
+            "6721": {
+                "id": 6721,
+                "data": {
+                    "inputs": [
+                        {
+                            "name": "Content",
+                            "taskType": "output",
+                            "socketKey": "Content",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        }
+                    ],
+                    "fewshot": "You are an Sentinent AI called Magick. You know about everything, you will help others to solve their problems and answer their questions.\n\nBased on the message user has sent, you have searched your memory and found this relevant information: {{Content}}",
+                    "success": false
+                },
+                "inputs": {
+                    "Content": {
+                        "connections": [
+                            {
+                                "node": 6720,
+                                "output": "content",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 6720,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 6717,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "prompt": {
+                        "connections": [
+                            {
+                                "node": 6717,
+                                "input": "system",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    1552,
+                    -96
+                ],
+                "name": "Text Template"
+            },
+            "6722": {
+                "id": 6722,
+                "data": {
+                    "type": "Conversation",
+                    "success": false
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 6717,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "content": {
+                        "connections": [
+                            {
+                                "node": 6584,
+                                "output": "content",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "event": {
+                        "connections": [
+                            {
+                                "node": 232,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "embedding": {
+                        "connections": []
+                    },
+                    "type": {
+                        "connections": []
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 6723,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    2160,
+                    144
+                ],
+                "name": "Store Event"
+            },
+            "6723": {
+                "id": 6723,
+                "data": {
+                    "type": "Conversation",
+                    "success": false,
+                    "storeEventFor": "Observer (Agent)"
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 6722,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "content": {
+                        "connections": [
+                            {
+                                "node": 6717,
+                                "output": "result",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "event": {
+                        "connections": [
+                            {
+                                "node": 232,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "embedding": {
+                        "connections": []
+                    },
+                    "type": {
+                        "connections": []
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 233,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    2448,
+                    144
+                ],
+                "name": "Store Event"
+            },
+            "6746": {
+                "id": 6746,
+                "data": {
+                    "_var": "Knowledge",
+                    "isPublic": false
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 6718,
+                                "input": "type",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    704,
+                    -208
+                ],
+                "name": "String Variable"
+            }
+        },
+        "comments": []
+    }
+}
